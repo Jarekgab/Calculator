@@ -3,7 +3,7 @@
  * http://andreinc.net/2011/01/03/rpn-calculator-using-python-scala-and-java/
  */
 
-package pl.nauka.jarek.calculator.calculatorAlgorytm;
+package pl.nauka.jarek.calculator.CalculatorAlgorytm;
 
 import java.util.LinkedList;
 

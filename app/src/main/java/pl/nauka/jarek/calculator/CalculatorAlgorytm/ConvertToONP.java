@@ -3,7 +3,7 @@
  * http://andreinc.net/2010/10/05/converting-infix-to-rpn-shunting-yard-algorithm/
  */
 
-package pl.nauka.jarek.calculator.calculatorAlgorytm;
+package pl.nauka.jarek.calculator.CalculatorAlgorytm;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -88,7 +88,7 @@ public class ConvertToONP {
 
     public static String getEquationInONE(String s)
     {
-        //TODO Można udoskonalić lub zmienić na inną metodę
+        //TODO Mozna udoskonalic lub zmienic na inna metode
 
         char[] in = s.toCharArray();
         StringBuilder out = new StringBuilder();

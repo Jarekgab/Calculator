@@ -10,8 +10,8 @@ import android.widget.TextView;
 
 import java.util.Scanner;
 
-import pl.nauka.jarek.calculator.calculatorAlgorytm.ConvertToONP;
-import pl.nauka.jarek.calculator.calculatorAlgorytm.ONPCalculation;
+import pl.nauka.jarek.calculator.CalculatorAlgorytm.ConvertToONP;
+import pl.nauka.jarek.calculator.CalculatorAlgorytm.ONPCalculation;
 
 public class MainActivity extends AppCompatActivity {
 
