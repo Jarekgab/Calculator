@@ -1,5 +1,5 @@
 /**
- * RPN Calculator (using Scala, python and Java)
+ * RPN Calculator
  * http://andreinc.net/2011/01/03/rpn-calculator-using-python-scala-and-java/
  */
 
@@ -9,10 +9,8 @@ import java.util.LinkedList;
 
 public class ONPCalculation {
 
-    // List of supported operators
     public static final String[] OPERATORS = { "+", "-", "x", "÷" };
 
-    // Test if a token is operator
     public static Boolean isOperator(String token) {
         for(String op : OPERATORS) {
             if(op.equals(token)) {
@@ -22,7 +20,6 @@ public class ONPCalculation {
         return false;
     }
 
-    // Operation based on operator
     public static Double operation(String op, Double e1, Double e2) {
         if(op.equals("+")) {
             return e1 + e2;
@@ -41,7 +38,6 @@ public class ONPCalculation {
         }
     }
 
-    // Evaluate RPN expr (given as array of tokens)
     public static Double eval(String[] tokens) {
         LinkedList<Double> stack = new LinkedList<Double>();
         for(String token : tokens) {

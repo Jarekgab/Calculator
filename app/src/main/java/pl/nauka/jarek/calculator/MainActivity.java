@@ -17,7 +17,6 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView resultView;
     private TextView resultView2;
-    private TextView resultView3;
     private Button cButton;
     private Button oButton;
     private Button divisionButton;
@@ -53,7 +52,6 @@ public class MainActivity extends AppCompatActivity {
     private void initViews() {
         resultView = findViewById(R.id.result_view);
         resultView2 = findViewById(R.id.result_view2);
-        resultView3 = findViewById(R.id.result_view3);
 
         cButton = findViewById(R.id.C_buttom);
         oButton = findViewById(R.id.O_buttom);
@@ -164,7 +162,6 @@ public class MainActivity extends AppCompatActivity {
                 change = 0;
                 resultView.setText(null);
                 resultView2.setText(null);
-                resultView3.setText(null);
             }
         });
 
@@ -260,7 +257,6 @@ public class MainActivity extends AppCompatActivity {
                         /**
                          * ConvertToONP
                          */
-//                        resultView3.setText(String.valueOf(ConvertToONP.getEquationInONE(getEquation())));
                         String[] input = (ConvertToONP.getEquationInONE(getEquation())).split(" ");
 
                         String[] output = ConvertToONP.infixToRPN(input);
@@ -269,8 +265,6 @@ public class MainActivity extends AppCompatActivity {
                         for (String token : output) {
                             sb.append(token + " ");
                         }
-                        resultView3.setText(String.valueOf(sb));
-
 
                         /**
                          * ONPCalculation
@@ -368,7 +362,7 @@ public class MainActivity extends AppCompatActivity {
             colorText = getColoredSpanned(s, Integer.toString(getResources().getColor(R.color.colorAccent)));
             resultView.append(Html.fromHtml(colorText));
         } else if (getEquationLastChar() == '÷' || getEquationLastChar() == 'x' || getEquationLastChar() == '-' || getEquationLastChar() == '+'|| getEquationLastChar() == '.')
-            //TODO Brak możliwości dodania np 22x33x(-3) dodać możliwość zmiany znaku za ()
+
         {
             backspace();
             colorText = getColoredSpanned(s, Integer.toString(getResources().getColor(R.color.colorAccent)));
@@ -444,16 +438,4 @@ public class MainActivity extends AppCompatActivity {
         String input = "<font color=" + color + ">" + text + "</font>";
         return input;
     }
-
-    private String[] stringArray(String input)
-    {
-        String [] result = new String[input.length()];
-
-        for(int i = 0; i < input.length() ; i ++ )
-        {
-            result[i] = input.substring(i,i+1);
-        }return result;
-    }
-
-
 }
